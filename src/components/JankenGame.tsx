@@ -140,11 +140,11 @@ export const JankenGame = ({ participants, onGameEnd }: JankenGameProps) => {
                     {participant.name}
                   </Badge>
                   <div className="text-4xl mb-2">
-                    {gameState === "result" && choices[participant.id] ? 
+                    {choices[participant.id] ? 
                       JANKEN_EMOJI[choices[participant.id]] : "❓"}
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    {gameState === "result" && choices[participant.id] ? 
+                    {choices[participant.id] ? 
                       JANKEN_NAME[choices[participant.id]] : "準備中..."}
                   </div>
                 </CardContent>
